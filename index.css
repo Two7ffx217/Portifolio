@@ -77,15 +77,16 @@ body {
     top: 60px; /* altura da navbar */
     right: 0;
     background: #111;
-    width: 200px;
+    width: 180px;       /* largura menor para menu compacto */
     flex-direction: column;
-    gap: 1em;
-    padding: 1.5em;
+    gap: 0.8em;        /* espaçamento reduzido */
+    padding: 1em;      /* padding reduzido */
     border-left: 2px solid #00d9ff;
     display: none;
     z-index: 1000;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
+    max-height: 400px; /* altura máxima para evitar menu gigante */
+    height: auto;
+    overflow-y: auto;  /* habilita scroll vertical se ultrapassar altura */
   }
 
   /* Mostrar menu ao ativar classe active */
@@ -104,6 +105,48 @@ body {
   /* Logo menor no mobile */
   .logo {
     font-size: 1.2em;
+  }
+
+  /* Ajustes gerais para responsividade */
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 2em;
+    text-align: center;
+  }
+
+  .hero-text {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .hero-text h2 {
+    font-size: 2.2em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  .hero-img img {
+    max-width: 260px;
+    margin-top: 2em;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 1em;
+    font-size: 1.05em;
   }
 }
 
@@ -187,48 +230,4 @@ body {
 @keyframes fadeInRight {
   from { opacity: 0; transform: translateX(50px); }
   to { opacity: 1; transform: translateX(0); }
-}
-
-/* Responsividade mobile adicionais */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .menu {
-    flex-direction: column;
-    gap: 1em;
-    margin-top: 1em;
-  }
-
-  .hero {
-    flex-direction: column;
-    padding: 2em;
-    text-align: center;
-  }
-
-  .hero-text {
-    padding: 0;
-    max-width: 100%;
-  }
-
-  .hero-text h2 {
-    font-size: 2.2em;
-  }
-
-  .hero-text p {
-    font-size: 1em;
-  }
-
-  .hero-img img {
-    max-width: 260px;
-    margin-top: 2em;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 1em;
-    font-size: 1.05em;
-  }
 }

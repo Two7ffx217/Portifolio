@@ -168,15 +168,16 @@ body {
     top: 60px; /* altura navbar */
     right: 0;
     background: #111;
-    width: 200px;
+    width: 180px;           /* diminui a largura */
     flex-direction: column;
-    gap: 1em;
-    padding: 1.5em;
+    gap: 0.8em;            /* diminui espaçamento */
+    padding: 1em;          /* diminui padding */
     border-left: 2px solid #00d9ff;
     display: none;
     z-index: 1000;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
+    max-height: 400px;     /* limita altura máxima */
+    height: auto;
+    overflow-y: auto;      /* scroll se ultrapassar limite */
   }
 
   /* Mostrar menu ao ativar classe active */
