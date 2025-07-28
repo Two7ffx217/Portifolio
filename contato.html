@@ -27,8 +27,12 @@
 <body>
   <header>
     <nav class="navbar">
-      <h1 class="logo">Alexandre | Web & Mobile Developer</h1>
-      <ul class="menu">
+      <h1 class="logo">Alexandre | Dev</h1>
+
+      <!-- Ícone hambúrguer -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <ul class="menu" id="menu">
         <li><a href="index.html">Início</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="certificados.html">Certificados</a></li>
@@ -62,5 +66,15 @@
       <button type="submit">Enviar</button>
     </form>
   </section>
+
+  <!-- Script do menu -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

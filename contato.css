@@ -17,22 +17,35 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5em 5%;
+  padding: 1em 5%;
   background: rgba(0, 0, 0, 0.9);
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1000;
   border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+  height: 60px;
 }
 
 .logo {
-  font-size: 1.8em;
+  font-size: 1.2em;
   color: #00d9ff;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
+/* Botão hambúrguer */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  color: #00d9ff;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Menu Desktop */
 .menu {
   list-style: none;
   display: flex;
@@ -54,7 +67,7 @@ body {
 
 /* ====== Seção Contato ====== */
 .contato {
-  padding: 4em 10%;
+  padding: 6em 10% 4em; /* espaço maior em cima por causa da navbar fixa */
   background: #111;
   min-height: 100vh;
   text-align: center;
@@ -65,7 +78,7 @@ body {
 }
 
 .contato h2 {
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 1.5em;
   color: #00d9ff;
   text-shadow: 0 0 8px #00d9ff;
@@ -157,14 +170,48 @@ form button:hover {
   transform: translateY(-3px);
 }
 
-/* Responsividade */
+/* ===== Responsividade ===== */
 @media (max-width: 768px) {
+  .menu {
+    position: fixed;
+    top: 60px; /* altura da navbar */
+    right: 0;
+    background: #111;
+    width: 200px;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.5em;
+    border-left: 2px solid #00d9ff;
+    display: none;
+    z-index: 1000;
+  }
+
+  .menu li {
+    text-align: right;
+  }
+
+  .menu li a {
+    font-size: 0.95em;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .logo {
+    font-size: 1em;
+  }
+
   .contato {
-    padding: 2em 5%;
+    padding: 6em 5% 2em;
   }
 
   .contato h2 {
-    font-size: 2em;
+    font-size: 1.6em;
   }
 
   .social-icons {
@@ -181,13 +228,9 @@ form button:hover {
     height: 25px;
   }
 
-  form {
-    width: 100%;
-  }
-
   form input,
   form textarea {
-    font-size: 0.95em;
+    font-size: 0.9em;
   }
 
   form button {

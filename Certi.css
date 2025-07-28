@@ -127,3 +127,76 @@ body {
     font-size: 1.1em;
   }
 }
+/* Botão hambúrguer - escondido no desktop */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  color: #00d9ff;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Navbar já configurada, só ajustar logo e menu no mobile */
+
+/* Menu desktop */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: #00d9ff;
+  text-shadow: 0 0 6px #00d9ff;
+}
+
+/* RESPONSIVIDADE: MOBILE - até 768px */
+@media (max-width: 768px) {
+  /* Mostrar botão hambúrguer */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Esconder menu inicialmente no mobile */
+  .menu {
+    position: fixed;
+    top: 60px; /* altura da navbar */
+    right: 0;
+    background: #111;
+    width: 200px;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.5em;
+    border-left: 2px solid #00d9ff;
+    display: none;
+    z-index: 1000;
+  }
+
+  /* Mostrar menu ao ativar classe active */
+  .menu.active {
+    display: flex;
+  }
+
+  /* Itens alinhados à direita no menu mobile */
+  .menu li {
+    text-align: right;
+  }
+
+  .menu li a {
+    font-size: 0.95em;
+  }
+
+  /* Logo menor */
+  .logo {
+    font-size: 1.2em;
+  }
+}
+

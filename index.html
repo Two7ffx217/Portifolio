@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfólio - Alexandre</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="icon" href="icon/icon att.jpg" type="image/png">
-
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="icon/icon att.jpg" type="image/png" />
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <h1 class="logo">Alexandre | Web & Mobile Developer</h1>
-      <ul class="menu">
+      <h1 class="logo">Alexandre | Dev</h1>
+
+      <!-- Ícone hambúrguer -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <ul class="menu" id="menu">
         <li><a href="index.html">Início</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="certificados.html">Certificados</a></li>
@@ -34,8 +37,17 @@
       <a href="skills.html" class="btn">Veja mais</a>
     </div>
     <div class="hero-img">
-      <img src="imgs/eu.PNG" alt="Foto de Alexandre">
+      <img src="imgs/eu.PNG" alt="Foto de Alexandre" />
     </div>
   </main>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
