@@ -33,6 +33,7 @@ body {
   text-transform: uppercase;
 }
 
+/* Menu desktop */
 .menu {
   list-style: none;
   display: flex;
@@ -51,6 +52,59 @@ body {
 .menu li a.active {
   color: #00d9ff;
   text-shadow: 0 0 6px #00d9ff;
+}
+
+/* Botão hambúrguer - escondido no desktop */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  color: #00d9ff;
+  cursor: pointer;
+  user-select: none;
+  margin-left: auto;
+}
+
+/* Responsividade - mobile até 768px */
+@media (max-width: 768px) {
+  /* Mostrar botão hambúrguer */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Menu móvel - escondido por padrão */
+  .menu {
+    position: fixed;
+    top: 60px; /* altura da navbar */
+    right: 0;
+    background: #111;
+    width: 200px;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.5em;
+    border-left: 2px solid #00d9ff;
+    display: none;
+    z-index: 1000;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+
+  /* Mostrar menu ao ativar classe active */
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    text-align: right;
+  }
+
+  .menu li a {
+    font-size: 0.95em;
+  }
+
+  /* Logo menor no mobile */
+  .logo {
+    font-size: 1.2em;
+  }
 }
 
 /* Hero Section */
@@ -135,7 +189,7 @@ body {
   to { opacity: 1; transform: translateX(0); }
 }
 
-/* Responsividade */
+/* Responsividade mobile adicionais */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -176,58 +230,5 @@ body {
     width: 100%;
     padding: 1em;
     font-size: 1.05em;
-  }
-}
-/* Botão hambúrguer - escondido no desktop */
-.menu-toggle {
-  display: none;
-  font-size: 1.8em;
-  color: #00d9ff;
-  cursor: pointer;
-  user-select: none;
-  margin-left: auto;
-}
-
-/* Navbar já configurada, só ajustar logo e menu no mobile */
-
-/* Responsividade - mobile até 768px */
-@media (max-width: 768px) {
-  /* Mostrar botão hambúrguer */
-  .menu-toggle {
-    display: block;
-  }
-
-  /* Esconder menu inicialmente no mobile */
-  .menu {
-    position: fixed;
-    top: 60px; /* altura da navbar */
-    right: 0;
-    background: #111;
-    width: 200px;
-    flex-direction: column;
-    gap: 1em;
-    padding: 1.5em;
-    border-left: 2px solid #00d9ff;
-    display: none;
-    z-index: 1000;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
-  }
-
-  /* Mostrar menu ao ativar classe active */
-  .menu.active {
-    display: flex;
-  }
-
-  .menu li {
-    text-align: right;
-  }
-
-  .menu li a {
-    font-size: 0.95em;
-  }
-
-  .logo {
-    font-size: 1.2em;
   }
 }

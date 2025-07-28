@@ -33,6 +33,7 @@ body {
   text-transform: uppercase;
 }
 
+/* Menu desktop */
 .menu {
   list-style: none;
   display: flex;
@@ -114,36 +115,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .menu {
-    flex-direction: column;
-    gap: 1em;
-    margin-top: 1em;
-  }
-
-  .skills {
-    padding: 2em;
-  }
-
-  .skills h2 {
-    font-size: 2em;
-  }
-
-  .skill-item img {
-    width: 55px;
-    height: 55px;
-  }
-
-  .skill-item p {
-    font-size: 1em;
-  }
-}
 /* Chamada para ação */
 .call-to-action {
   margin-top: 3em;
@@ -191,7 +162,7 @@ body {
     display: block;
   }
 
-  /* Esconder menu inicialmente no mobile */
+  /* Menu móvel - escondido inicialmente */
   .menu {
     position: fixed;
     top: 60px; /* altura navbar */
@@ -224,5 +195,22 @@ body {
   .logo {
     font-size: 1.2em;
   }
-}
 
+  /* Ajustes na skills section */
+  .skills {
+    padding: 2em;
+  }
+
+  .skills h2 {
+    font-size: 2em;
+  }
+
+  .skill-item img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .skill-item p {
+    font-size: 1em;
+  }
+}
