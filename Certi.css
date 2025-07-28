@@ -1,0 +1,129 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 5%;
+  background: rgba(0, 0, 0, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.logo {
+  font-size: 1.8em;
+  color: #00d9ff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: #00d9ff;
+  text-shadow: 0 0 6px #00d9ff;
+}
+
+/* Seção Certificados */
+.certificados {
+  padding: 4em 10%;
+  background: linear-gradient(180deg, #0d0d0d, #111);
+  text-align: center;
+  min-height: 100vh;
+}
+
+.certificados h2 {
+  font-size: 2.5em;
+  margin-bottom: 2em;
+  color: #00d9ff;
+  text-shadow: 0 0 10px #00d9ff;
+}
+
+/* Grid de certificados */
+.grid-certificados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5em;
+  justify-items: center;
+}
+
+.cert-item {
+  background: #1c1c1c;
+  border-radius: 15px;
+  padding: 2em;
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.cert-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.4);
+}
+
+.cert-item h3 {
+  font-size: 1.3em;
+  color: #00d9ff;
+  margin-bottom: 1em;
+}
+
+.cert-item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.cert-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .certificados {
+    padding: 2em 5%;
+  }
+
+  .certificados h2 {
+    font-size: 2em;
+  }
+
+  .cert-item {
+    padding: 1.5em;
+    max-width: 100%;
+  }
+
+  .cert-item h3 {
+    font-size: 1.1em;
+  }
+}

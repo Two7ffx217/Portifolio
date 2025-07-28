@@ -1,0 +1,198 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 5%;
+  background: rgba(0, 0, 0, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.logo {
+  font-size: 1.8em;
+  color: #00d9ff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: #00d9ff;
+}
+
+/* ====== Seção Contato ====== */
+.contato {
+  padding: 4em 10%;
+  background: #111;
+  min-height: 100vh;
+  text-align: center;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contato h2 {
+  font-size: 2.5em;
+  margin-bottom: 1.5em;
+  color: #00d9ff;
+  text-shadow: 0 0 8px #00d9ff;
+}
+
+/* Ícones sociais */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 3em;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background: #222;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #00d9ff;
+  box-shadow: 0 0 20px #00d9ff;
+  transform: scale(1.1);
+}
+
+.social-icons a:hover img {
+  filter: brightness(0) invert(0);
+}
+
+/* Formulário */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+form input,
+form textarea {
+  padding: 1em;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  background: #222;
+  color: #eee;
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.15);
+  resize: none;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  box-shadow: 0 0 18px #00d9ff;
+  transform: scale(1.02);
+}
+
+form button {
+  background: #00d9ff;
+  color: #000;
+  padding: 1em 2em;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px #00d9ff;
+}
+
+form button:hover {
+  background: #00b6d4;
+  box-shadow: 0 0 20px #00b6d4;
+  transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contato {
+    padding: 2em 5%;
+  }
+
+  .contato h2 {
+    font-size: 2em;
+  }
+
+  .social-icons {
+    gap: 1.2em;
+  }
+
+  .social-icons a {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-icons a img {
+    width: 25px;
+    height: 25px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.95em;
+  }
+
+  form button {
+    font-size: 1em;
+    padding: 0.9em;
+    width: 100%;
+  }
+}

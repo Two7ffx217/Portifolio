@@ -1,0 +1,175 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 5%;
+  background: rgba(0, 0, 0, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.logo {
+  font-size: 1.8em;
+  color: #00d9ff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-weight: 500;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: #00d9ff;
+  text-shadow: 0 0 6px #00d9ff;
+}
+
+/* Skills Section */
+.skills {
+  padding: 4em 10%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0d0d0d 0%, #111 100%);
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5em;
+  margin-bottom: 2em;
+  color: #00d9ff;
+  text-shadow: 0 0 10px #00d9ff;
+}
+
+/* Grid de habilidades */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2em;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.skill-item {
+  background: #1c1c1c;
+  border-radius: 15px;
+  padding: 2em 1em;
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 217, 255, 0.5);
+}
+
+.skill-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 1em;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover img {
+  transform: scale(1.1);
+}
+
+.skill-item p {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 0.5em;
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+  }
+
+  .skills {
+    padding: 2em;
+  }
+
+  .skills h2 {
+    font-size: 2em;
+  }
+
+  .skill-item img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .skill-item p {
+    font-size: 1em;
+  }
+}
+/* Chamada para ação */
+.call-to-action {
+  margin-top: 3em;
+  text-align: center;
+  color: #ccc;
+}
+
+.call-to-action p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+  color: #eee;
+}
+
+.call-to-action .btn {
+  background: #00d9ff;
+  color: #000;
+  padding: 0.8em 2em;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block;
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.3);
+}
+
+.call-to-action .btn:hover {
+  background: #00b6d4;
+  box-shadow: 0 0 20px #00b6d4;
+}

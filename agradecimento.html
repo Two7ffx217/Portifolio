@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="icon/icon att.jpg" type="image/png">
+  <title>Obrigado!</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #00d9ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      text-align: center;
+      padding: 20px;
+    }
+    .message-box {
+      background-color: #111;
+      padding: 2rem 3rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00d9ff;
+      max-width: 400px;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn-home {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #0d0d0d;
+      background: #00d9ff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 217, 255, 0.4);
+    }
+    .btn-home:hover {
+      background-color: #009ecf;
+      box-shadow: 0 8px 20px rgba(0, 158, 207, 0.6);
+    }
+
+    /* Responsividade */
+    @media (max-width: 480px) {
+      .message-box {
+        padding: 1.5rem 2rem;
+        max-width: 90%;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .btn-home {
+        padding: 0.65rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="message-box">
+    <h1>Obrigado pelo seu contato!</h1>
+    <p>Entrarei em contato em breve.</p>
+    <a href="index.html" class="btn-home">Voltar para a página inicial</a>
+  </div>
+</body>
+</html>

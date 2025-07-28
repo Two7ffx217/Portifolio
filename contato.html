@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato - Alexandre Dev</title>
+  <link rel="icon" href="icon/icon att.jpg" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("U5V1MoID23LJrwvCm"); // Sua Public Key
+    })();
+
+    function sendEmail(event) {
+      event.preventDefault();
+      emailjs.sendForm('service_c5ak5dl', 'template_ol7kj8c', event.target)
+        .then(() => {
+          window.location.href = "agradecimento.html";
+        }, (error) => {
+          alert('Erro ao enviar, tente novamente.');
+          console.error(error);
+        });
+    }
+  </script>
+  <link rel="stylesheet" href="contato.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Alexandre | Web & Mobile Developer</h1>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certificados.html">Certificados</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contato">
+    <h2>Entre em contato comigo</h2>
+
+    <div class="social-icons">
+      <a href="https://github.com/Two7ffx217" target="_blank" rel="noopener noreferrer">
+        <img src="imgs/git.png" alt="GitHub" />
+      </a>
+      <a href="https://linkedin.com/in/alexandre-silva-743a8635b" target="_blank" rel="noopener noreferrer">
+        <img src="imgs/LinkedIn2.png" alt="LinkedIn" />
+      </a>
+      <a href="https://instagram.com/Xandecoimbra7" target="_blank" rel="noopener noreferrer">
+        <img src="imgs/Instagram.png" alt="Instagram" />
+      </a>
+      <a href="https://wa.me/+5535998653077" target="_blank" rel="noopener noreferrer">
+        <img src="imgs/WhatsApp.png" alt="WhatsApp" />
+      </a>
+    </div>
+
+    <form id="contact-form" onsubmit="sendEmail(event)">
+      <input type="text" name="name" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu email" required />
+      <textarea name="message" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</body>
+</html>
